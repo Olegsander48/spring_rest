@@ -16,12 +16,11 @@ import java.util.Properties;
 @EnableWebMvc
 @EnableTransactionManagement
 public class AppConfig {
-
     @Bean
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("org.postgresql.Driver");
-        dataSource.setUrl("jdbc:postgresql://localhost:5432/jpa");
+        dataSource.setUrl("jdbc:postgresql://localhost:5432/spring_rest");
         dataSource.setUsername("postgres");
         dataSource.setPassword("password");
         return dataSource;

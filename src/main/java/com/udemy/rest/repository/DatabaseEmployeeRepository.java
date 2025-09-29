@@ -29,6 +29,12 @@ public class DatabaseEmployeeRepository implements EmployeeRepository {
     }
 
     @Override
+    public void updateEmployee(Employee employee) {
+        Session session = this.sessionFactory.getCurrentSession();
+        session.merge(employee);
+    }
+
+    @Override
     public Employee findById(int id) {
         return sessionFactory.getCurrentSession().find(Employee.class, id);
     }

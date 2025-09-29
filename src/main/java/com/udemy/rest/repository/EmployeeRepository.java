@@ -8,6 +8,8 @@ public interface EmployeeRepository {
 
     void saveEmployee(Employee employee);
 
+    void updateEmployee(Employee employee);
+
     Employee findById(int id);
 
     void remove(int id);

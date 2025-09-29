@@ -40,4 +40,10 @@ public class EmployeeController {
         employeeService.saveEmployee(employee);
         return employee;
     }
+
+    @PutMapping("/employees")
+    public Employee updateEmployee(@RequestBody Employee employee) {
+        employeeService.updateEmployee(employee);
+        return employee;
+    }
 }

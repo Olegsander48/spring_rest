@@ -28,6 +28,12 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     @Transactional
+    public void updateEmployee(Employee employee) {
+        employeeDao.updateEmployee(employee);
+    }
+
+    @Override
+    @Transactional
     public Employee findById(int id) {
         return employeeDao.findById(id);
     }

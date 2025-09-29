@@ -25,7 +25,7 @@ public class DatabaseEmployeeRepository implements EmployeeRepository {
     @Override
     public void saveEmployee(Employee employee) {
         Session session = this.sessionFactory.getCurrentSession();
-        session.merge(employee);
+        session.persist(employee);
     }
 
     @Override
